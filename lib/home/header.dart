@@ -1,21 +1,5 @@
 import 'package:flutter/material.dart';
 
-class HomeWidgets extends StatelessWidget {
-  const HomeWidgets({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      child: Column(
-        children:[
-          MainHeader(),
-        ],
-      ),
-    );
-  }
-}
-
-
 class MainHeader extends StatelessWidget {
   const MainHeader({Key? key}) : super(key: key);
 
