@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
-
+import 'package:tetete/morning/Header.dart';
 class MiddleText extends StatelessWidget {
   const MiddleText({Key? key}) : super(key: key);
   @override
@@ -32,7 +32,12 @@ class MiddleText extends StatelessWidget {
                 borderRadius: BorderRadius.circular(20.0),
               ),
             ),
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) =>  Greeting()),
+              );
+            },
             child: const Align(
               alignment: Alignment.center,
               child: Text(

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:tetete/morning/Header.dart';
 import 'home/Home.dart';
 import 'home/header.dart';
 
@@ -40,7 +40,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
       /*appBar: AppBar(
         title: const Text('Main header'),
       ),*/
-      body: HomeWidgets(),
+      body: Greeting(),
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
