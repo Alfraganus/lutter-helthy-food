@@ -1,4 +1,4 @@
-// ignore: file_names
+// ignore: file_names SizedBox(height: 10),
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
@@ -31,6 +31,7 @@ class TitleWithMoreBtn extends StatelessWidget {
             child: Text(
               "See all",
               style: TextStyle(
+                fontSize: 30,
                   color: HexColor('#E5737D'),
               ),
             ),
@@ -52,14 +53,13 @@ class TitleWithCustomUnderline extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 24,
       child: Stack(
         children: <Widget>[
           Padding(
             padding: const EdgeInsets.only(left: kDefaultPadding / 4),
             child: Text(
               text,
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+              style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
             ),
           ),
           Positioned(
