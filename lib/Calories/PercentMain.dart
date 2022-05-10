@@ -21,6 +21,14 @@ class PercentMainIndicator extends StatelessWidget {
             color: Color.fromARGB(30, 0, 169, 181),
             thicknessUnit: GaugeSizeUnit.factor,
           ),
+            pointers: <GaugePointer>[
+              RangePointer(
+                value: 26,
+                cornerStyle: CornerStyle.bothCurve,
+                width: 0.2,
+                sizeUnit: GaugeSizeUnit.factor,
+              )
+            ],
           annotations: <GaugeAnnotation>[
             GaugeAnnotation(
                 positionFactor: 0.1,
