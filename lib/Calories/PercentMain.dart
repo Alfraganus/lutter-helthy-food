@@ -21,7 +21,15 @@ class PercentMainIndicator extends StatelessWidget {
             color: Color.fromARGB(30, 0, 169, 181),
             thicknessUnit: GaugeSizeUnit.factor,
           ),
-        )
+          annotations: <GaugeAnnotation>[
+            GaugeAnnotation(
+                positionFactor: 0.1,
+                angle: 90,
+                widget: Text('27 / 100',
+                  style: TextStyle(fontSize: 11),
+                ))
+          ]
+        ),
       ]),
     );
   }
