@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'PercentMain.dart';
 import 'Weekdays.dart';
 
 class CaloriesMain extends StatelessWidget {
@@ -14,7 +14,15 @@ class CaloriesMain extends StatelessWidget {
           padding: EdgeInsets.symmetric(horizontal: 25),
           child: Column(
             children: [
+              SizedBox(height: 20,),
+              Text('Calories',textAlign: TextAlign.center,
+              style: TextStyle(
+                fontSize: 30,
+                fontWeight: FontWeight.bold
+              ),),
               WeekDays(),
+              SizedBox(height: 20),
+              PercentMainIndicator()
             ],
           ),
         ),
