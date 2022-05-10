@@ -14,16 +14,25 @@ class PercentMainIndicator extends StatelessWidget {
           minimum: 0,
           maximum: 100,
           showLabels: false,
-          showTicks: false,
+          showTicks: true,
+          minorTickStyle: MinorTickStyle(
+            color: HexColor('#E5737D'),
+            thickness: 3
+          ),
+          majorTickStyle: MajorTickStyle(
+            color: HexColor('#E5737D'),
+            thickness: 3
+          ),
           axisLineStyle: AxisLineStyle(
-            thickness: 0.2,
+            thickness: 0.3,
             cornerStyle: CornerStyle.bothCurve,
-            color: Color.fromARGB(30, 0, 169, 181),
+            color: Colors.transparent,
             thicknessUnit: GaugeSizeUnit.factor,
           ),
             pointers: <GaugePointer>[
               RangePointer(
-                value: 26,
+                color: HexColor('#E5737D'),
+                value: 75,
                 cornerStyle: CornerStyle.bothCurve,
                 width: 0.2,
                 sizeUnit: GaugeSizeUnit.factor,
