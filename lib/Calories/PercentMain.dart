@@ -40,11 +40,23 @@ class PercentMainIndicator extends StatelessWidget {
             ],
           annotations: <GaugeAnnotation>[
             GaugeAnnotation(
-                positionFactor: 0.1,
                 angle: 90,
-                widget: Text('27 / 100',
-                  style: TextStyle(fontSize: 11),
-                ))
+                axisValue: 50,
+                positionFactor: 0.9,
+                widget: Column(
+                  children: const[
+                    Text('Total Calories', style:
+                      TextStyle(
+                        fontSize: 20,
+                          fontWeight: FontWeight.w900
+                      )),
+                    SizedBox(height: 10),
+                    Text('1284 kcal', style: TextStyle(
+                        fontSize: 35,
+                        fontWeight: FontWeight.w900
+                    ),),
+                  ],
+                ) )
           ]
         ),
       ]),
