@@ -8,13 +8,14 @@ class HomeWidgets extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Column(
-        children:[
-          MainHeader(),
-          MiddleText(),
-
-        ],
+    return SingleChildScrollView(
+      child: Container(
+        child: Column(
+          children:[
+            MainHeader(),
+            MiddleText(),
+          ],
+        ),
       ),
     );
   }

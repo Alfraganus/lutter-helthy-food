@@ -34,30 +34,28 @@ class Day extends StatelessWidget {
      Color color =  isActive == false? Colors.black:Colors.white;
     return Transform.translate(
        offset:  Offset(0, this.isActive == true ? -15 : 0),
-      child: Container(
-        padding: EdgeInsets.only(right: 20,top: 30),
-        child: Container(
-          padding: EdgeInsets.symmetric(vertical: 10),
-          width: 80,
-          height: 90,
-          decoration: BoxDecoration(
-            color: isActive == false? HexColor('#F4F4F4'): HexColor('#E5737D'),
-          ),
-
-          child: Column(
-            children: [
-              Text(day, style: TextStyle(
-               color: color,
+      child:  Container(
+        padding: EdgeInsets.symmetric(vertical: 10),
+        width: 80,
+        height: 90,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(12),
+          color: isActive == false? HexColor('#F4F4F4'): HexColor('#E5737D'),
+        ),
+        child: Column(
+          children: [
+            Text(day, style: TextStyle(
+                color: color,
                 fontWeight: FontWeight.w700,
                 fontSize: 16
-              ),),
-              Text(date.toString(), style:  TextStyle(
+            ),),
+            SizedBox(height: 15),
+            Text(date.toString(), style:  TextStyle(
                 color:color,
-                  fontWeight: FontWeight.w700,
-                  fontSize: 16
-              ))
-            ],
-          ),
+                fontWeight: FontWeight.w700,
+                fontSize: 22
+            ))
+          ],
         ),
       ),
     );

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import '../morning/TitleWithMoreBtn.dart';
+import 'BreakfastList.dart';
 import 'PercentMain.dart';
 import 'SecondaryPercents.dart';
 import 'Weekdays.dart';
@@ -8,7 +10,9 @@ class CaloriesMain extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Calories'),
+        title: Text('Calories', style: TextStyle(
+          fontWeight: FontWeight.w900
+        )),
       ),
       body: SingleChildScrollView(
         child: Padding(
@@ -21,11 +25,18 @@ class CaloriesMain extends StatelessWidget {
                 fontSize: 30,
                 fontWeight: FontWeight.w800
               ),),
+              SizedBox(height: 20,),
               WeekDays(),
               SizedBox(height: 20),
               PercentMainIndicator(),
               SizedBox(height: 20),
-              SecondaryPercents()
+              SecondaryPercents(),
+              SizedBox(height: 45),
+              const TitleWithMoreBtn(title: "Breakfast"),
+              SizedBox(height: 25),
+              BreakfastList(title: 'Sandwich'),
+              BreakfastList(title: 'Pancake'),
+              BreakfastList(title: 'Cake'),
             ],
           ),
         ),
